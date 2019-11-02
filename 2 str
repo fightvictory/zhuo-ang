@@ -1,0 +1,434 @@
+>>> help(str)
+
+>>> min('d', 'a', 'c', 't')
+'a'
+>>> min('d', 'a', 'c', 'T')
+'T'
+>>> 'a' > 'A'
+True
+>>> ord('a')
+97
+>>> ord('A')
+65
+>>> ord('6')
+54
+>>> ord('0')
+48
+>>> chr(97)
+'a'
+>>> help(ord)
+
+>>> help(chr)
+
+>>> from fractions import Fraction
+>>> x = Fraction(1, 3)
+>>> x
+Fraction(1, 3)
+>>> print(x)
+1/3
+>>> y = Fraction(4, 6)
+>>> y
+Fraction(2, 3)
+>>> z = x + y
+>>> z
+Fraction(1, 1)
+>>> print(z)
+1
+>>> type(z)
+<class 'fractions.Fraction'>
+>>> x - y
+Fraction(-1, 3)
+>>> x * y
+Fraction(2, 9)
+>>> x / y
+Fraction(1, 2)
+>>> Fraction(.25)
+Fraction(1, 4)
+>>> Fraction(1)
+Fraction(1, 1)
+>>> Fraction(10)
+Fraction(10, 1)
+>>> Fraction(10.8)
+Fraction(3039929748475085, 281474976710656)
+>>> Fraction(1.3)
+Fraction(5854679515581645, 4503599627370496)
+>>> Fraction(.35)
+Fraction(3152519739159347, 9007199254740992)
+>>> Fraction(.25)
+Fraction(1, 4)
+>>> Fraction(1.25)
+Fraction(5, 4)
+>>> Fraction('1.25')
+Fraction(5, 4)
+>>> 
+>>> Fraction('a')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/fractions.py", line 138, in __new__
+    numerator)
+ValueError: Invalid literal for Fraction: 'a'
+>>> from factrions import 
+  File "<stdin>", line 1
+    from factrions import 
+                         ^
+SyntaxError: invalid syntax
+>>> from factrions import Fraction
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'factrions'
+>>> "I love Python"
+'I love Python'
+>>> 'I love Python'
+'I love Python'
+>>> 'a'
+'a'
+>>> 'b'
+'b'
+>>> '''dafewaoejfrkldjsfaksjewijfklsadjfaeiw
+... jfalskfjsklfjadskfjas
+... fjslkjfadlsfkjas'''
+'dafewaoejfrkldjsfaksjewijfklsadjfaeiw\njfalskfjsklfjadskfjas\nfjslkjfadlsfkjas'
+>>> "dfasfasfdsa
+  File "<stdin>", line 1
+    "dfasfasfdsa
+               ^
+SyntaxError: EOL while scanning string literal
+>>> """ fiowejrfksfjaoewfj
+... dsfjioejwfoijqiofjwaq
+... vcx,mvcxz,.mvkladsfvxcvz"""
+' fiowejrfksfjaoewfj\ndsfjioejwfoijqiofjwaq\nvcx,mvcxz,.mvkladsfvxcvz'
+>>> print('''abc
+... bcd
+... efg''')
+abc
+bcd
+efg
+>>> title = "meaning"'of'"Life"
+>>> title
+'meaningofLife'
+>>> title = 'meang "of" Life'
+>>> title
+'meang "of" Life'
+>>> 'knight\'s'
+"knight's"
+>>> 'knight\"s'
+'knight"s'
+>>> 'knight"s'
+'knight"s'
+>>> 'knight's'
+  File "<stdin>", line 1
+    'knight's'
+            ^
+SyntaxError: invalid syntax
+>>> 'knight\'s'
+"knight's"
+>>> s = 'a\nb\tc'
+>>> s
+'a\nb\tc'
+>>> print(s)
+a
+b	c
+>>> s = 'a\nb\tc\vd'
+>>> print(s)
+a
+b	c
+         d
+>>> 'abcdefg\
+... hijklmn\
+... opqrst'
+'abcdefghijklmnopqrst'
+>>> 'fdasfadsfadssssssssssssssssssss\sssssssssssssssssssssssssssssssss
+  File "<stdin>", line 1
+    'fdasfadsfadssssssssssssssssssss\sssssssssssssssssssssssssssssssss
+                                                                     ^
+SyntaxError: EOL while scanning string literal
+>>> print('fadsfasfadsfadsfadsfadsf\
+... fdsfadslfjadslfadjslf\fadsfsadlfadjslf')
+fadsfasfadsfadsfadsfadsffdsfadslfjadslfadjslf
+                                             adsfsadlfadjslf
+>>> 'asdfasfa\\rewrewrewr'
+'asdfasfa\\rewrewrewr'
+>>> 'asdfasfa\\rewrewrewr'
+'asdfasfa\\rewrewrewr'
+>>> 'asdfasfa \\ ewrewrewr'
+'asdfasfa \\ ewrewrewr'
+>>> '\\'
+'\\'
+>>> '\'
+  File "<stdin>", line 1
+    '\'
+      ^
+SyntaxError: EOL while scanning string literal
+>>> print('\\')
+\
+>>> '\n'
+'\n'
+>>> print('dfasfads\nfdsafadsfa')
+dfasfads
+fdsafadsfa
+>>> print('dfasfads\\fdsafadsfa')
+dfasfads\fdsafadsfa
+>>> '\a'
+'\x07'
+>>> print('\a')
+
+>>> print('\a')
+
+>>> print('\a')
+
+>>> for i in range(10):
+...     print('\a')
+... 
+
+
+
+
+
+
+
+
+
+
+>>> import time
+>>> for i in range(10):
+...     print('\a')
+...     time.sleep(1)
+... 
+
+
+
+
+
+
+
+
+
+
+>>> s = 'Python'
+>>> len(s)
+6
+>>> 'acd' + 'def'
+'acddef'
+>>> 'Hi! " * 4
+  File "<stdin>", line 1
+    'Hi! " * 4
+             ^
+SyntaxError: EOL while scanning string literal
+>>> 'Hi! ' * 4
+'Hi! Hi! Hi! Hi! '
+>>> print('=' * 80)
+================================================================================
+>>> myjob = 'hacker'
+>>> for c in myjob:
+...  print(c)
+... 
+h
+a
+c
+k
+e
+r
+>>> help(print)
+
+>>> for c in myjob:
+...  print(c, end='')
+... 
+hackfor c in myjob:
+... 
+  File "<stdin>", line 2
+    
+    ^
+IndentationError: expected an indented block
+>>> for c in myjob:
+...  print(c, end=' ')
+... 
+h a for c in myjob:
+... 
+  File "<stdin>", line 2
+    
+    ^
+IndentationError: expected an indented block
+>>> for c in myjob:
+...  print(c, end='_')
+... 
+h_a_for c in myjob:
+...  print(c, end='000000000')
+... 
+h000000000a000000000c000000000k000000000e000000000r000000000>>> 
+>>> print('abc', '123', 'xyz', sep='####')
+abc####123####xyz
+>>> help(print)
+
+>>> s = "I love Python"
+>>> s[0]
+'I'
+>>> s[5]
+'e'
+>>> s[-1]
+'n'
+>>> len(s)
+13
+>>> s[12]
+'n'
+>>> s[-1]
+'n'
+>>> s[-2]
+'o'
+>>> s[-3]
+'h'
+>>> s[2:6]
+'love'
+>>> s[0:6]
+'I love'
+>>> s[:6]
+'I love'
+>>> s
+'I love Python'
+>>> s[7:-1]
+'Pytho'
+>>> s[7:]
+'Python'
+>>> s[:]
+'I love Python'
+>>> s = "abcdefghijk"
+>>> s[:]
+'abcdefghijk'
+>>> s[::2]
+'acegik'
+>>> s[::1]
+'abcdefghijk'
+>>> s[::]
+'abcdefghijk'
+>>> s[::0]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: slice step cannot be zero
+>>> s[::-1]
+'kjihgfedcba'
+>>> "42" + 1
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: must be str, not int
+>>> "42" + str(1)
+'421'
+>>> s = 1
+>>> '42' + s
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: must be str, not int
+>>> '42' + 's'
+'42s'
+>>> '42' + str(s)
+'421'
+>>> int('42') + 1
+43
+>>> int('42') + s
+43
+>>> s
+1
+>>> s = 'spam'
+>>> s[0] = 'x'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object does not support item assignment
+>>> s = 'x' + s[1:]
+>>> s
+'xpam'
+>>> s = 'I love Python'
+>>> s.replace('Python', 'Java')
+'I love Java'
+>>> s
+'I love Python'
+>>> s = s.replace('Python', 'Java')
+>>> s
+'I love Java'
+>>> age = 10
+>>> print("the boy is %d" % age)
+the boy is 10
+>>> print("the boy is %d years old" % age)
+the boy is 10 years old
+>>> age = 20
+>>> print("the boy is %d years old" % age)
+the boy is 20 years old
+>>> address = "四平"
+>>> print("the boy is come from %s, he is %d years old" % address, age) 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: not enough arguments for format string
+>>> print("the boy is come from %s, he is %d years old" % (address, age))
+the boy is come from 四平, he is 20 years old
+>>> "the boy is come from %s, he is %d years old".format(address, age)
+'the boy is come from %s, he is %d years old'
+>>> "the boy is come from {0}, he is {1} years old".format(address, age)
+'the boy is come from 四平, he is 20 years old'
+>>> help(str)
+
+>>> help(str)
+
+>>> help(str)
+
+>>> dir(str)
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+>>> help(str.capitalize)
+
+>>> s = 'i love python'
+>>> s.capitalize()
+'I love python'
+>>> s.title()
+'I Love Python'
+>>> s.count('o')
+2
+>>> s.count('love')
+1
+>>> s.count('love1')
+0
+>>> help(str.find)
+
+>>> s.find('o')
+3
+>>> s
+'i love python'
+>>> s.find('o', 5)
+11
+>>> s.index(3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: must be str, not int
+>>> s.index('o')
+3
+>>> s.index('z')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: substring not found
+>>> s.find('z')
+-1
+>>> help(str.index)
+
+>>> dir(str)
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+>>> s.isalnum()
+False
+>>> s
+'i love python'
+>>> s1 = '123'
+>>> s1.isalnum()
+True
+>>> s1 = '123abc'
+>>> s1.isalnum()
+True
+>>> help(str.isalnum)
+
+>>> sq.isalpha()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'sq' is not defined
+>>> s1.isalpha()
+False
+>>> s.isalpha()
+False
+>>> s
+'i love python'
+>>> s1 = 'abc123'
+>>> s1.isalnum()
+True
+>>> 
