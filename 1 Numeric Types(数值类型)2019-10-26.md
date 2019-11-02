@@ -179,3 +179,46 @@ TypeError: sum expected at most 2 arguments, got 4
 >>> random.randint(1, 100)   # 生成一个1到100之间的整数
 46
 ```
+## 分数
+```
+>>> from fractions import Fraction   # 引入分数类型 Fraction
+>>> x = Fraction(1, 3)      # 创建分数对象
+>>> x
+Fraction(1, 3)
+>>> print(x)
+1/3
+>>> y = Fraction(4, 6)     # 自动约分
+>>> y
+Fraction(2, 3)
+>>> z = x + y      # 两个分数进行 + - * / 运算后，结果还是分数类型
+>>> z
+Fraction(1, 1)
+>>> print(z)
+1
+>>> type(z)
+<class 'fractions.Fraction'>
+>>> x - y
+Fraction(-1, 3)
+>>> x * y
+Fraction(2, 9)
+>>> x / y
+Fraction(1, 2)
+>>> Fraction(.25)     # 把小数直接转换成分数
+Fraction(1, 4)
+>>> Fraction(1)
+Fraction(1, 1)
+>>> Fraction(10)
+Fraction(10, 1)
+>>> Fraction(10.8)
+Fraction(3039929748475085, 281474976710656)
+>>> Fraction(1.3)
+Fraction(5854679515581645, 4503599627370496)
+>>> Fraction(.35)
+Fraction(3152519739159347, 9007199254740992)
+>>> Fraction(.25)
+Fraction(1, 4)
+>>> Fraction(1.25)
+Fraction(5, 4)
+>>> Fraction('1.25')
+Fraction(5, 4)
+```
