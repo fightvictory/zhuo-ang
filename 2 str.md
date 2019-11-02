@@ -25,15 +25,15 @@ True
 字符串
 ======
 ```
->>> "I love Python"
+>>> "I love Python"    # 单引号、双引号没有区别
 'I love Python'
 >>> 'I love Python'
 'I love Python'
->>> 'a'
+>>> 'a'      # 一个字符也是字符串
 'a'
 >>> 'b'
 'b'
->>> '''dafewaoejfrkldjsfaksjewijfklsadjfaeiw
+>>> '''dafewaoejfrkldjsfaksjewijfklsadjfaeiw      #   三个引号，可以换行输入字符串
 ... jfalskfjsklfjadskfjas
 ... fjslkjfadlsfkjas'''
 'dafewaoejfrkldjsfaksjewijfklsadjfaeiw\njfalskfjsklfjadskfjas\nfjslkjfadlsfkjas'
@@ -47,19 +47,19 @@ True
 abc
 bcd
 efg
->>> title = "meaning"'of'"Life"
+>>> title = "meaning"'of'"Life"      # 不同引号，写在一起合成一个字符串
 >>> title
 'meaningofLife'
 >>> title = 'meang "of" Life'
 >>> title
 'meang "of" Life'
->>> 'knight\'s'
+>>> 'knight\'s'     # \ 斜杠后表示转义字符，单引号里要表示一个单引号，要写 \'
 "knight's"
->>> 'knight\"s'
+>>> 'knight\"s'     # 同上， \" 转义字符双引号
 'knight"s'
 >>> 'knight"s'
 'knight"s'
->>> 'knight's'
+>>> 'knight's'      # 错误写法
   File "<stdin>", line 1
     'knight's'
             ^
@@ -67,10 +67,10 @@ SyntaxError: invalid syntax
 >>> 'knight\'s'
 "knight's"
 ```
->>> s = 'a\nb\tc'
+>>> s = 'a\nb\tc'   # \n 表示换行   \t 表示制表符
 >>> s
 'a\nb\tc'
->>> print(s)
+>>> print(s)     # 用print显示的情况
 a
 b	c
 >>> s = 'a\nb\tc\vd'
@@ -78,93 +78,37 @@ b	c
 a
 b	c
          d
->>> 'abcdefg\
+>>> 'abcdefg\    # 单独一个 \ 表示没有写完，换行后继续，是一个字符串
 ... hijklmn\
 ... opqrst'
 'abcdefghijklmnopqrst'
->>> 'fdasfadsfadssssssssssssssssssss\sssssssssssssssssssssssssssssssss
-  File "<stdin>", line 1
-    'fdasfadsfadssssssssssssssssssss\sssssssssssssssssssssssssssssssss
-                                                                     ^
-SyntaxError: EOL while scanning string literal
->>> print('fadsfasfadsfadsfadsfadsf\
-... fdsfadslfjadslfadjslf\fadsfsadlfadjslf')
-fadsfasfadsfadsfadsfadsffdsfadslfjadslfadjslf
-                                             adsfsadlfadjslf
->>> 'asdfasfa\\rewrewrewr'
-'asdfasfa\\rewrewrewr'
->>> 'asdfasfa\\rewrewrewr'
-'asdfasfa\\rewrewrewr'
->>> 'asdfasfa \\ ewrewrewr'
-'asdfasfa \\ ewrewrewr'
->>> '\\'
-'\\'
->>> '\'
-  File "<stdin>", line 1
-    '\'
-      ^
-SyntaxError: EOL while scanning string literal
->>> print('\\')
+
+>>> print('\\')   # 要想输出一个 \，要写两个\\
 \
 >>> '\n'
 '\n'
->>> print('dfasfads\nfdsafadsfa')
-dfasfads
-fdsafadsfa
->>> print('dfasfads\\fdsafadsfa')
-dfasfads\fdsafadsfa
->>> '\a'
-'\x07'
->>> print('\a')
-
->>> print('\a')
-
->>> print('\a')
-
+>>> print('\a')   # 输出系统的一个响铃
 >>> for i in range(10):
 ...     print('\a')
 ... 
 
-
-
-
-
-
-
-
-
-
->>> import time
+>>> import time    # 上面的输出太快，听不到10个响铃，这里设置一秒响铃一次
 >>> for i in range(10):
 ...     print('\a')
 ...     time.sleep(1)
 ... 
 
-
-
-
-
-
-
-
-
-
 >>> s = 'Python'
->>> len(s)
+>>> len(s)       # 求字符串长度函数
 6
->>> 'acd' + 'def'
+>>> 'acd' + 'def'   # 字符串合并
 'acddef'
->>> 'Hi! " * 4
-  File "<stdin>", line 1
-    'Hi! " * 4
-             ^
-SyntaxError: EOL while scanning string literal
->>> 'Hi! ' * 4
+>>> 'Hi! ' * 4      #  字符串乘以一个数，就是复制这个字符串几遍
 'Hi! Hi! Hi! Hi! '
 >>> print('=' * 80)
 ================================================================================
 >>> myjob = 'hacker'
->>> for c in myjob:
+>>> for c in myjob:   # 循环输出字符串每个字符
 ...  print(c)
 ... 
 h
@@ -175,24 +119,10 @@ e
 r
 >>> help(print)
 
->>> for c in myjob:
+>>> for c in myjob:   #  print函数，参数end表示输出末尾是什么字符，默认是回车\n
 ...  print(c, end='')
 ... 
-hackfor c in myjob:
-... 
-  File "<stdin>", line 2
-    
-    ^
-IndentationError: expected an indented block
->>> for c in myjob:
-...  print(c, end=' ')
-... 
-h a for c in myjob:
-... 
-  File "<stdin>", line 2
-    
-    ^
-IndentationError: expected an indented block
+hack
 >>> for c in myjob:
 ...  print(c, end='_')
 ... 
@@ -200,61 +130,57 @@ h_a_for c in myjob:
 ...  print(c, end='000000000')
 ... 
 h000000000a000000000c000000000k000000000e000000000r000000000>>> 
->>> print('abc', '123', 'xyz', sep='####')
+>>> print('abc', '123', 'xyz', sep='####')   # print函数，参数sep表示输出的数据间隔的内容，默认是空格
 abc####123####xyz
 >>> help(print)
 
 >>> s = "I love Python"
->>> s[0]
+>>> s[0]       # 用下标方式求字符串索引位置的值
 'I'
 >>> s[5]
 'e'
->>> s[-1]
+>>> s[-1]      # 最后一个字符的值
 'n'
 >>> len(s)
 13
 >>> s[12]
 'n'
->>> s[-1]
-'n'
->>> s[-2]
+>>> s[-2]      # 倒数第二个
 'o'
->>> s[-3]
+>>> s[-3]      # 倒数第三个
 'h'
->>> s[2:6]
+>>> s[2:6]     # 字符串切片，从第2个到第5个，注意字符串是从0开始计数，切片不包含最后一个位置6
 'love'
 >>> s[0:6]
 'I love'
->>> s[:6]
+>>> s[:6]      # 从第0个元素开始，可以省略0
 'I love'
 >>> s
 'I love Python'
 >>> s[7:-1]
 'Pytho'
->>> s[7:]
+>>> s[7:]      # 从某个位置取到最后一个元素，切片的左端数字可以省略
 'Python'
->>> s[:]
+>>> s[:]       # 表示字符串本身
 'I love Python'
 >>> s = "abcdefghijk"
 >>> s[:]
 'abcdefghijk'
->>> s[::2]
+>>> s[::2]    # 隔一个取一个字符
 'acegik'
->>> s[::1]
+>>> s[::1]    # 步长默认值是1
 'abcdefghijk'
->>> s[::]
-'abcdefghijk'
->>> s[::0]
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-ValueError: slice step cannot be zero
->>> s[::-1]
+
+>>> s[::-1]   # 步长设置为-1，则逆序显示字符串
 'kjihgfedcba'
->>> "42" + 1
+```
+## 字符串合并
+```
+>>> "42" + 1   # str类型不能数值类型相加减
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: must be str, not int
->>> "42" + str(1)
+>>> "42" + str(1)   # 通str把数字转换为字符串
 '421'
 >>> s = 1
 >>> '42' + s
@@ -269,8 +195,8 @@ TypeError: must be str, not int
 43
 >>> int('42') + s
 43
->>> s
-1
+```
+
 >>> s = 'spam'
 >>> s[0] = 'x'
 Traceback (most recent call last):
